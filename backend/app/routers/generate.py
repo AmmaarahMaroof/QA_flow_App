@@ -1,14 +1,14 @@
 from fastapi import APIRouter
 
-from app.models import StoryRequest, TestGenerationRequest
+from app.models import StoryRequest, TestGenerationResponse
 
 router = APIRouter()
 
-@router.post("/generate/story", response_model=TestGenerationRequest)
-def generate_story(request: StoryRequest) -> TestGenerationRequest:
+@router.post("/generate", response_model=TestGenerationResponse)
+def generate_story(request: StoryRequest) -> TestGenerationResponse:
     # Placeholder for story generation logic
-    generated_story = f"Generated story based on input: {request.story}"
-    return TestGenerationRequest(
+    generate = f"Generated story based on input: {request.story}"
+    return TestGenerationResponse(
         manual_test_cases=[f"Fake manual test case for: {request.story[:30]}..."],
         bdd_scenarios=["Given a user, When they do X, Then Y happens"],
         edge_cases=["Fake edge case"],

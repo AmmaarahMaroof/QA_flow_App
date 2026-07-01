@@ -3,7 +3,7 @@ from pydantic import BaseModel
 class StoryRequest(BaseModel):
     story: str
 
-class TestGenerationRequest(BaseModel):
+class TestGenerationResponse(BaseModel):
     manual_test_cases: list[str]
     bdd_scenarios: list[str]
     edge_cases: list[str]
