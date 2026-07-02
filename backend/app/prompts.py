@@ -6,6 +6,7 @@ Given a Jira user story, generate:
 - edge_cases: Unusual or unexpected situations that could break the feature
 - boundary_tests: Tests specifically around limits (minimums, maximums, empty values, off-by-one conditions)
 - test_data_suggestions: Concrete example data values a tester could use
+- smoke_tests: A small set of tests to quickly verify the feature works at a basic level
 
 Be specific to the story provided. Do not include generic filler. Each list should have 3-5 relevant items."""
 
