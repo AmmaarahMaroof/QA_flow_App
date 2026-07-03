@@ -16,8 +16,9 @@ export default function StoryInput({ onSubmit }: StoryInputProps) {
 
   return (
     <div className="w-full max-w-2xl">
-      <label htmlFor="story" className="block text-sm font-medium text-gray-700 mb-2">
+      <label htmlFor="story" className="block text-sm font-medium text-gray-700 mb-2 underline underline-offset-2">
         Paste your User Story Below:
+        
       </label>
       <textarea
         id="story"
